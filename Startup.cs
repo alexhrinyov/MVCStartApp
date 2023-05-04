@@ -31,7 +31,8 @@ namespace MVCStartApp
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<BlogContext>(options => options.UseSqlServer(connection));
             // регистрация сервиса репозитория для взаимодействия с базой данных
-            services.AddSingleton<IBlogRepository, BlogRepository>();
+            //services.AddSingleton<IBlogRepository, BlogRepository>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
             services.AddControllersWithViews();
         }
 
