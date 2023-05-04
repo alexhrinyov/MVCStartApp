@@ -21,5 +21,10 @@ namespace MVCStartApp.Controllers
             var authors = await _repo.GetUsers();
             return View(authors);
         }
+
+        public async Task<IActionResult> Register()
+        {
+            return View();
+        }
     }
 }
