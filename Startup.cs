@@ -33,6 +33,7 @@ namespace MVCStartApp
             // регистрация сервиса репозитория для взаимодействия с базой данных
             //services.AddSingleton<IBlogRepository, BlogRepository>();
             services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IRequestRepository, RequestRepository>();
             services.AddControllersWithViews();
         }
 
